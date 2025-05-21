@@ -20,13 +20,13 @@ Open your terminal and run the following command:
 ```
 python3.12 -m pip install pandas stealth_requests beautifulsoup4
 ```
-# Clean the CSV/XLSX
-## Run the cleaning script to process your raw leads after changing input file to desired input file
+## Clean the CSV/XLSX
+### Run the cleaning script to process your raw leads after changing input file to desired input file
 ```
 python clean_csv_leadfile.py 
 ```
-# Find LinkedIn URLs
-## Run the cleaning script to process your raw leads after changing input file to desired input file and output files
+## Find LinkedIn URLs
+### Run the cleaning script to process your raw leads after changing input file to desired input file and output files
 
 ```
 python find_linkedin_fromcsv.py
