@@ -27,10 +27,11 @@ python clean_csv_leadfile.py
 ```
 # Find LinkedIn URLs
 ## Run the cleaning script to process your raw leads after changing input file to desired input file and output files
-```
+
 ```
 python find_linkedin_fromcsv.py
 ```
+
 
 
 
