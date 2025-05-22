@@ -215,6 +215,7 @@ def process_excel(input_filepath, output_filepath):
 
         if not final_fn or final_fn == "INVALID_NAME_KEYWORD" or \
            not final_ln or final_ln == "INVALID_NAME_KEYWORD":
+            # df.loc[index, 'Processing Status'] = 'Skipped - Invalid/Missing Name Parts'
             continue
 
         processed_record = dict(row) # Start with a copy of the original row
@@ -226,7 +227,8 @@ def process_excel(input_filepath, output_filepath):
         # If it wasn't in input, it was initialized to "" by the loop at the start.
         # The original example specifically set LinkedIn URL = '', so if that's needed:
         # processed_record['LinkedIn URL'] = '' 
-
+        # For now, we preserve or use the initialized empty string from df.
+        
         current_processing_status += 'Processed'
         processed_record['Processing Status'] = current_processing_status.strip().rstrip(';')
         records.append(processed_record)
@@ -255,5 +257,5 @@ if __name__ == '__main__':
     '''*************************************************************************************************************************************************'''
 
     inp = r'C:\Users\prana\300rows.xlsx' # Use raw string for Windows paths or escape backslashes
-    outp = 'myoutput.xlsx'
+    outp = 'cleandoutput.xlsx'
     process_excel(inp, outp)
