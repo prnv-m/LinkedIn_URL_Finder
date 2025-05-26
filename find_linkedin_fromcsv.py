@@ -1,5 +1,5 @@
 import pandas as pd
-import stealth_requests as requests # Assuming you have this installed
+import stealth_requests as requests 
 from bs4 import BeautifulSoup
 from urllib.parse import quote_plus
 import time
